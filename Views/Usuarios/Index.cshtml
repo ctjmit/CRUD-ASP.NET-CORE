@@ -1,0 +1,32 @@
+﻿@model List<AppWeb.Models.Domain.Usuario>
+@{
+}
+
+<h1>Usuarios Registrados</h1>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>Id</th>*@
+            <th>Name</th>
+            <th>Email</th>
+            <th>Salario</th>
+            <th>Edad</th>
+            <th>Fecha</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+               @* <td>@usuario.Id</td>*@
+                <td>@usuario.Name</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.Salario</td>
+                <td>@usuario.Edad</td>
+                <td>@usuario.Fecha.ToString("dd-MM-yyyy")</td>
+                <td><a href="Usuarios/View/@usuario.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

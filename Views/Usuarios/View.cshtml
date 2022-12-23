@@ -1,0 +1,35 @@
+﻿@model AppWeb.Models.EditUsuarioM
+@{
+}
+<!--Pagina para editar Usuario-->
+
+<h1>Editar Usuario</h1>
+<form method="post" action="view" class="mt-5">
+  <div class="mb-3">
+     <label for="" class="form-label">Id</label>
+     <input type="text" class="form-control" asp-for="Id" readonly>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Nombre</label>
+    <input type="text" class="form-control" asp-for="Name">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Email</label>
+    <input type="email" class="form-control" asp-for="Email">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Salario</label>
+    <input type="number" class="form-control" asp-for="Salario">
+  </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Edad</label>
+        <input type="number" class="form-control" asp-for="Edad">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" asp-for="Fecha">
+    </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Borrar" asp-controller="Usuarios">Borrar</button>
+</form>
